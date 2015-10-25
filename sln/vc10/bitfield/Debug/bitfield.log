@@ -1,0 +1,24 @@
+﻿Build started 25.10.2015 19:21:58.
+     1>Project "C:\Users\Женя -ПК\Documents\GitHub\mp2-lab1-set\sln\vc10\bitfield\bitfield.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I../../../include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\tbitfield.cpp ..\..\..\src\tset.cpp
+         tset.cpp
+         tbitfield.cpp
+         Generating Code...
+     1>c:\users\женя -пк\documents\github\mp2-lab1-set\src\tbitfield.cpp(150): error C4716: 'TBitField::operator~' : must return a value
+     1>c:\users\женя -пк\documents\github\mp2-lab1-set\src\tset.cpp(26): error C4716: 'TSet::operator TBitField' : must return a value
+     1>c:\users\женя -пк\documents\github\mp2-lab1-set\src\tset.cpp(62): error C4716: 'TSet::operator+' : must return a value
+     1>c:\users\женя -пк\documents\github\mp2-lab1-set\src\tset.cpp(66): error C4716: 'TSet::operator+' : must return a value
+     1>c:\users\женя -пк\documents\github\mp2-lab1-set\src\tset.cpp(70): error C4716: 'TSet::operator-' : must return a value
+     1>c:\users\женя -пк\documents\github\mp2-lab1-set\src\tset.cpp(30): error C4716: 'TSet::GetMaxPower' : must return a value
+     1>c:\users\женя -пк\documents\github\mp2-lab1-set\src\tset.cpp(74): error C4716: 'TSet::operator*' : must return a value
+     1>c:\users\женя -пк\documents\github\mp2-lab1-set\src\tset.cpp(78): error C4716: 'TSet::operator~' : must return a value
+     1>c:\users\женя -пк\documents\github\mp2-lab1-set\src\tset.cpp(84): error C4716: 'operator>>' : must return a value
+     1>c:\users\женя -пк\documents\github\mp2-lab1-set\src\tset.cpp(88): error C4716: 'operator<<' : must return a value
+     1>c:\users\женя -пк\documents\github\mp2-lab1-set\src\tset.cpp(58): error C4716: 'TSet::operator!=' : must return a value
+     1>c:\users\женя -пк\documents\github\mp2-lab1-set\src\tset.cpp(49): error C4716: 'TSet::operator=' : must return a value
+     1>Done Building Project "C:\Users\Женя -ПК\Documents\GitHub\mp2-lab1-set\sln\vc10\bitfield\bitfield.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:02.08
