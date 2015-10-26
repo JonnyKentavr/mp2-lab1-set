@@ -9,6 +9,8 @@
 
 TBitField::TBitField(int len)
 {
+	if (len < 0)
+		throw 001;
 	BitLen = len;
 	MemLen = BitLen / (sizeof(TELEM) * 8) + 1;
 	pMem = new TELEM[MemLen];
@@ -52,16 +54,28 @@ int TBitField::GetLength(void) const // получить длину (к-во б�
 
 void TBitField::SetBit(const int n) // установить бит
 {
-	pMem[GetMemIndex(n)] = pMem[GetMemIndex(n)] || GetMemMask(n);
+	if (n < 0)
+		throw 001;
+	if (n > BitLen)
+		throw 002;
+	pMem[GetMemIndex(n)] = pMem[GetMemIndex(n)] | GetMemMask(n);
 }
 
 void TBitField::ClrBit(const int n) // очистить бит
 {
-	pMem[GetMemIndex(n)] = pMem[GetMemIndex(n)] && ~GetMemMask(n);
+	if (n < 0)
+		throw 001;
+	if (n > BitLen)
+		throw 002;
+	pMem[GetMemIndex(n)] = pMem[GetMemIndex(n)] & ~GetMemMask(n);
 }
 
 int TBitField::GetBit(const int n) const // получить значение бита
 {
+	if (n < 0)
+		throw 001;
+	if (n > BitLen)
+		throw 002;
 	if (pMem[GetMemIndex(n)] && GetMemMask(n))
 		return 1;
 	else
@@ -143,10 +157,10 @@ TBitField TBitField::operator&(const TBitField &bf) // операция "и"
 TBitField TBitField::operator~(void) // отрицание
 {
 	for (int i = 0; i < BitLen; i++)
-		if (GetBit(i) == 1)
-			ClrBit(i);
-		else
-			SetBit(i);
+	if (GetBit(i) == 1)
+	ClrBit(i);
+	else
+	SetBit(i);
 	return (*this); 
 }
 
